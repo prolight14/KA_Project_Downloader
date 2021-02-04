@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "Khan Academy Project Downloader",
+    "version": "0.9",
+    "content_scripts": [{
+        "matches": ["https://www.khanacademy.org/computer-programming/*"],
+        "js": ["./js/content.js"]
+    }],
+
+    "browser_action": {
+  		"default_icon": "./images/icon.png"
+  	},
+
+  	"background": {
+  		"scripts": ["./js/background.js", "./libraries/jquery.min.js", "./libraries/jszip/FileSaver.js", "./libraries/jszip/jszip.js"],
+  		"persistent": false
+  	}
+}
